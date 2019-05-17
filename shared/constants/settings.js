@@ -68,6 +68,8 @@ export const makeState: I.RecordFactory<Types._State> = I.Record({
   waitingForResponse: false,
 })
 
+export const getPushTokenForLogSend = (state: Object) => ({pushToken: state.push.token})
+
 export const traceInProgressKey = 'settings:traceInProgress'
 export const traceInProgress = (state: TypedState) => WaitingConstants.anyWaiting(state, traceInProgressKey)
 export const processorProfileInProgressKey = 'settings:processorProfileInProgress'
